@@ -7,10 +7,12 @@ LABEL name="$NAME" \
 # Install packages
 RUN dnf -y upgrade \ 
  && dnf -y install \ 
+ texlive-scheme-basic \
  texstudio \ 
  'tex(lipsum.sty)' \ 
  'tex(siunitx.sty)' \ 
  'tex(fontawesome5.sty)' \
  'tex(nth.sty)' \ 
+ 'tex(beamer.cls)' \
  catharsis-cormorant-garamond-fonts  --nodocs --setopt install_weak_deps=False \
  && dnf clean all
